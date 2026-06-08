@@ -1,12 +1,10 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Nav } from "@/components/portfolio/Nav";
 import { Hero } from "@/components/portfolio/Hero";
-import { Journey } from "@/components/portfolio/Journey";
 import { Exploration } from "@/components/portfolio/Exploration";
 import { Work } from "@/components/portfolio/Work";
 import { Experience } from "@/components/portfolio/Experience";
 import { Skills } from "@/components/portfolio/Skills";
-import { Certifications } from "@/components/portfolio/Certifications";
 import { Contact } from "@/components/portfolio/Contact";
 
 export const Route = createFileRoute("/")({
@@ -14,6 +12,12 @@ export const Route = createFileRoute("/")({
     meta: [
       { title: "Sakshi Vinayak Raorane — Curious Engineer. Analytical Thinker." },
       { name: "description", content: "Final-year ECS student at VESIT turning complex problems into actionable insights through data, AI, and software." },
+      { property: "og:title", content: "Sakshi Vinayak Raorane — Portfolio" },
+      { property: "og:description", content: "Curious engineer. Analytical thinker. Problem solver." },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Sakshi Vinayak Raorane — Portfolio" },
+      { name: "twitter:description", content: "Curious engineer. Analytical thinker. Problem solver." },
     ],
   }),
   component: Index,
@@ -24,12 +28,10 @@ function Index() {
     <main className="bg-background text-foreground antialiased">
       <Nav />
       <Hero />
-      <Journey />
       <Exploration />
       <Work />
       <Experience />
       <Skills />
-      <Certifications />
       <Contact />
     </main>
   );
