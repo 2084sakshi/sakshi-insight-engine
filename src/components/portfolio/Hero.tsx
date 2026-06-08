@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { ArrowDown, ArrowUpRight, Download, Mail } from "lucide-react";
 import heroIllustration from "@/assets/hero-illustration.png";
+import resumeAsset from "@/assets/resume.pdf.asset.json";
 
 export function Hero() {
   return (
@@ -72,7 +73,8 @@ export function Hero() {
               <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
             </a>
             <a
-              href="/resume.pdf"
+              href={resumeAsset.url}
+              download="Sakshi_Raorane_Resume.pdf"
               className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-5 py-3 text-sm font-medium hover:border-foreground/40 transition-colors"
             >
               <Download className="h-4 w-4" />
