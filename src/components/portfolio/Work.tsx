@@ -203,7 +203,12 @@ function ProjectCard({ p }: { p: Project }) {
           </div>
         </div>
         <div className="p-7 lg:p-9 flex flex-col">
-          <h3 className={`font-display tracking-tight text-ink ${p.large ? "text-4xl" : "text-2xl"}`}>
+          <div className="flex items-center gap-2">
+            <span className="text-[10px] uppercase tracking-wider text-primary font-medium">
+              {p.category}
+            </span>
+          </div>
+          <h3 className={`font-display tracking-tight text-ink mt-2 ${p.large ? "text-4xl" : "text-2xl"}`}>
             {p.title}
           </h3>
           <p className="mt-4 text-muted-foreground leading-relaxed text-[15px]">
@@ -216,7 +221,7 @@ function ProjectCard({ p }: { p: Project }) {
               </span>
             ))}
           </div>
-          <div className="mt-auto pt-7 flex items-center gap-3">
+          <div className="mt-auto pt-7 flex flex-wrap items-center gap-4">
             {p.github && (
               <a href={p.github} target="_blank" rel="noreferrer"
                 className="inline-flex items-center gap-1.5 text-sm text-foreground hover:text-primary transition-colors">
@@ -227,6 +232,20 @@ function ProjectCard({ p }: { p: Project }) {
               <a href={p.live} target="_blank" rel="noreferrer"
                 className="inline-flex items-center gap-1.5 text-sm text-foreground hover:text-primary transition-colors">
                 <Globe className="h-4 w-4" /> Live
+                <ArrowUpRight className="h-3.5 w-3.5" />
+              </a>
+            )}
+            {p.dashboard && (
+              <a href={p.dashboard} target="_blank" rel="noreferrer"
+                className="inline-flex items-center gap-1.5 text-sm text-foreground hover:text-primary transition-colors">
+                <LayoutDashboard className="h-4 w-4" /> Dashboard
+                <ArrowUpRight className="h-3.5 w-3.5" />
+              </a>
+            )}
+            {p.article && (
+              <a href={p.article} target="_blank" rel="noreferrer"
+                className="inline-flex items-center gap-1.5 text-sm text-foreground hover:text-primary transition-colors">
+                <FileText className="h-4 w-4" /> Article
                 <ArrowUpRight className="h-3.5 w-3.5" />
               </a>
             )}
