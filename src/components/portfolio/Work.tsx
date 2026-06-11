@@ -1,4 +1,4 @@
-import { ArrowUpRight, Github, Globe } from "lucide-react";
+import { ArrowUpRight, FileText, Github, Globe, LayoutDashboard } from "lucide-react";
 import { Reveal } from "./Reveal";
 
 type Project = {
@@ -6,51 +6,86 @@ type Project = {
   description: string;
   tech: string[];
   highlight: string;
+  category: string;
   github?: string;
   live?: string;
+  dashboard?: string;
+  article?: string;
   large?: boolean;
-  visual: "data" | "shield" | "ai" | "stack";
+  visual: "data" | "shield" | "ai" | "stack" | "chart" | "mail";
 };
 
 const projects: Project[] = [
   {
-    title: "Google Data Analytics Capstone",
+    title: "Google Data Analytics Capstone Project",
     description:
-      "Analyzed 5.6M+ ride records to uncover user behavior patterns, seasonal trends, and business insights. Built an interactive Tableau dashboard with KPI tracking and visual storytelling.",
-    tech: ["SQL", "Excel", "Tableau"],
-    highlight: "5.6M+ records analyzed",
-    github: "https://github.com/2084sakshi/google-captsone-project",
-    live: "https://2084sakshi.github.io/data-analysis/",
-    large: true,
+      "Performed end-to-end data analysis involving data collection, cleaning, transformation, exploratory analysis, visualization, and business insight generation. Developed SQL queries for data extraction, aggregation, filtering, and trend analysis. Identified customer behavior patterns and actionable business insights through analytical reporting.",
+    tech: ["SQL", "Excel", "Data Analytics"],
+    highlight: "End-to-end data analysis",
+    category: "Data Analytics",
+    github: "https://github.com/2084sakshi/google-captsone-project/blob/main/README.md",
+    article: "https://medium.com/@sakshiraorane.2005/phase-5-act-turning-insights-into-action-final-step-of-the-google-data-analytics-capstone-fb3cefce2b59",
     visual: "data",
   },
   {
-    title: "Network Intrusion Detection System",
+    title: "Road Accident Analysis Dashboard",
     description:
-      "ML-based system that classifies normal and malicious network traffic. Focused on intelligent threat detection, explainability, and future IPS integration.",
-    tech: ["Python", "Scikit-learn", "Flask", "Pandas"],
-    highlight: "Cybersecurity × Machine Learning",
-    github: "https://github.com/2084sakshi/NIDS/tree/master",
-    visual: "shield",
+      "Developed an interactive Power BI dashboard analyzing accident trends, casualty statistics, severity patterns, vehicle involvement, road conditions, and geographical distributions. Built KPI-driven reports and analytical visualizations to support data-driven decision making.",
+    tech: ["Power BI", "Excel"],
+    highlight: "Interactive Power BI dashboard",
+    category: "Data Analytics",
+    github: "https://github.com/2084sakshi/data-analysis/blob/main/road-accident-analysis/README.md",
+    dashboard: "https://2084sakshi.github.io/data-analysis/",
+    visual: "chart",
+  },
+  {
+    title: "EV Sales Analysis Dashboard",
+    description:
+      "Built a business intelligence dashboard analyzing EV sales performance, market growth, regional adoption, market share, and manufacturer trends. Created KPI reports and DAX measures to evaluate year-over-year growth and business performance.",
+    tech: ["Power BI", "Excel", "DAX"],
+    highlight: "Business intelligence dashboard",
+    category: "Data Analytics",
+    github: "https://github.com/2084sakshi/data-analysis/blob/main/Vehicles%20_Sales%20Analysis/README.md",
+    dashboard: "https://2084sakshi.github.io/data-analysis/",
+    visual: "chart",
+  },
+  {
+    title: "MedConnect360",
+    description:
+      "Built a full-stack doctor-patient appointment management platform featuring authentication, appointment booking, patient management, doctor workflows, and REST APIs.",
+    tech: ["MongoDB", "Express.js", "React.js", "Node.js"],
+    highlight: "Full-stack MERN platform",
+    category: "Software Engineering",
+    visual: "stack",
+  },
+  {
+    title: "Email-GPT",
+    description:
+      "Developed an AI-powered email generation platform that creates customized emails based on user requirements, tone, subject, and content preferences.",
+    tech: ["Python", "Flask", "Generative AI"],
+    highlight: "AI-powered email generation",
+    category: "Software Engineering",
+    visual: "mail",
   },
   {
     title: "Prep.AI",
     description:
-      "AI-powered platform for resume analysis and interview preparation. Uses LLMs, vector search, and retrieval to deliver personalized career guidance.",
+      "Developed an AI-powered platform using LLMs, FAISS, and LangChain for resume analysis and interview preparation. Generates ATS feedback, resume improvement recommendations, and personalized interview guidance.",
     tech: ["Python", "Gemini API", "FAISS", "LangChain", "Streamlit"],
-    highlight: "Generative AI Application",
+    highlight: "AI interview preparation",
+    category: "Generative AI",
     github: "https://github.com/2084sakshi/prep.ai",
     live: "https://prepai.streamlit.app/",
     visual: "ai",
   },
   {
-    title: "MedConnect360",
+    title: "Network Intrusion Detection and Prevention System",
     description:
-      "Full-stack appointment management platform connecting doctors, patients, and administrators with authentication, scheduling, and role-based access.",
-    tech: ["React", "Node.js", "Express", "MongoDB"],
-    highlight: "End-to-end full-stack solution",
-    github: "https://github.com/2084sakshi/medconnect360",
-    visual: "stack",
+      "Developed a full-stack cybersecurity platform capable of monitoring network traffic, detecting malicious activities, classifying threats, generating alerts, maintaining security logs, and visualizing network events through real-time dashboards.",
+    tech: ["Python", "Flask", "SQLite", "Machine Learning", "Cybersecurity", "React"],
+    highlight: "Cybersecurity + ML platform",
+    category: "Cybersecurity",
+    visual: "shield",
   },
 ];
 
