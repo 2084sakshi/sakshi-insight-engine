@@ -115,6 +115,21 @@ function Visual({ kind }: { kind: Project["visual"] }) {
       </svg>
     );
   }
+  if (kind === "chart") {
+    return (
+      <svg viewBox="0 0 200 160" className="w-full h-full">
+        <g stroke="oklch(0.32 0.14 268)" strokeOpacity="0.15" strokeWidth="1">
+          {Array.from({ length: 5 }).map((_, i) => (
+            <line key={i} x1="20" y1={30 + i * 25} x2="180" y2={30 + i * 25} />
+          ))}
+        </g>
+        <rect x="30" y="80" width="28" height="50" rx="3" fill="oklch(0.45 0.18 295)" fillOpacity="0.5" />
+        <rect x="66" y="55" width="28" height="75" rx="3" fill="oklch(0.32 0.14 268)" fillOpacity="0.25" />
+        <rect x="102" y="40" width="28" height="90" rx="3" fill="oklch(0.45 0.18 295)" fillOpacity="0.5" />
+        <rect x="138" y="65" width="28" height="65" rx="3" fill="oklch(0.32 0.14 268)" fillOpacity="0.25" />
+      </svg>
+    );
+  }
   if (kind === "shield") {
     return (
       <svg viewBox="0 0 200 160" className="w-full h-full">
@@ -151,6 +166,16 @@ function Visual({ kind }: { kind: Project["visual"] }) {
             [60, 100].map((y2) => <line key={`b-${y1}-${y2}`} x1="100" y1={y1} x2="160" y2={y2} />)
           )}
         </g>
+      </svg>
+    );
+  }
+  if (kind === "mail") {
+    return (
+      <svg viewBox="0 0 200 160" className="w-full h-full">
+        <rect x="35" y="35" width="130" height="90" rx="8" fill="none" stroke="oklch(0.32 0.14 268)" strokeWidth="1.5" />
+        <path d="M35 45 L100 85 L165 45" stroke="oklch(0.32 0.14 268)" strokeWidth="1.5" fill="none" />
+        <circle cx="100" cy="95" r="4" fill="oklch(0.45 0.18 295)" />
+        <path d="M85 95 Q100 110 115 95" stroke="oklch(0.45 0.18 295)" strokeWidth="1.5" fill="none" />
       </svg>
     );
   }
