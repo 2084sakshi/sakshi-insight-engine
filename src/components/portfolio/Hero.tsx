@@ -25,9 +25,9 @@ export function Hero() {
       <div className="relative mx-auto max-w-6xl w-full px-5 grid lg:grid-cols-[1.2fr_1fr] gap-12 items-center">
         <div>
           <motion.div
-            initial={{ opacity: 0, y: 12 }}
+            initial={{ opacity: 0, y: 8 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+            transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
             className="inline-flex items-center gap-2 rounded-full border border-border bg-card/60 backdrop-blur px-3 py-1.5 text-xs text-muted-foreground"
           >
             <span className="relative flex h-1.5 w-1.5">
@@ -38,9 +38,9 @@ export function Hero() {
           </motion.div>
 
           <motion.h1
-            initial={{ opacity: 0, y: 24 }}
+            initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
+            transition={{ duration: 0.45, delay: 0.05, ease: [0.22, 1, 0.36, 1] }}
             className="mt-6 font-display text-[clamp(2.6rem,6vw,5.25rem)] leading-[1.02] tracking-tight text-balance text-ink"
           >
             Turning complex problems into{" "}
@@ -49,9 +49,9 @@ export function Hero() {
           </motion.h1>
 
           <motion.p
-            initial={{ opacity: 0, y: 24 }}
+            initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.25, ease: [0.22, 1, 0.36, 1] }}
+            transition={{ duration: 0.45, delay: 0.12, ease: [0.22, 1, 0.36, 1] }}
             className="mt-7 text-lg text-muted-foreground max-w-xl leading-relaxed"
           >
             Final-year Electronics and Computer Science student at VESIT —
@@ -60,11 +60,12 @@ export function Hero() {
           </motion.p>
 
           <motion.div
-            initial={{ opacity: 0, y: 16 }}
+            initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.4 }}
+            transition={{ duration: 0.4, delay: 0.18 }}
             className="mt-9 flex flex-wrap items-center gap-3"
           >
+
             <a
               href="#work"
               className="group inline-flex items-center gap-2 rounded-full bg-foreground text-background px-5 py-3 text-sm font-medium hover:bg-primary transition-colors"
@@ -92,7 +93,7 @@ export function Hero() {
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ delay: 0.7, duration: 1 }}
+            transition={{ delay: 0.3, duration: 0.5 }}
             className="mt-14 flex items-center gap-8 text-xs text-muted-foreground"
           >
             <div>
@@ -113,9 +114,9 @@ export function Hero() {
         </div>
 
         <motion.div
-          initial={{ opacity: 0, scale: 0.95 }}
+          initial={{ opacity: 0, scale: 0.97 }}
           animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 1, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
+          transition={{ duration: 0.5, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
           className="relative hidden lg:block"
         >
           <motion.div
@@ -130,8 +131,12 @@ export function Hero() {
                 alt="Editorial illustration of Sakshi Raorane combining data, AI, and software."
                 width={1024}
                 height={1024}
+                loading="eager"
+                fetchPriority="high"
+                decoding="async"
                 className="w-full h-auto"
               />
+
             </div>
           </motion.div>
 
