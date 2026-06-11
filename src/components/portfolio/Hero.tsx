@@ -130,8 +130,12 @@ export function Hero() {
                 alt="Editorial illustration of Sakshi Raorane combining data, AI, and software."
                 width={1024}
                 height={1024}
+                loading="eager"
+                fetchPriority="high"
+                decoding="async"
                 className="w-full h-auto"
               />
+
             </div>
           </motion.div>
 
