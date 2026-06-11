@@ -93,7 +93,7 @@ export function Hero() {
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ delay: 0.7, duration: 1 }}
+            transition={{ delay: 0.3, duration: 0.5 }}
             className="mt-14 flex items-center gap-8 text-xs text-muted-foreground"
           >
             <div>
