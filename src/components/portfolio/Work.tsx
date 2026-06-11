@@ -28,6 +28,35 @@ const projects: Project[] = [
     visual: "data",
   },
   {
+    title: "Network Intrusion Detection and Prevention System",
+    description:
+      "Developed a full-stack cybersecurity platform capable of monitoring network traffic, detecting malicious activities, classifying threats, generating alerts, maintaining security logs, and visualizing network events through real-time dashboards.",
+    tech: ["Python", "Flask", "SQLite", "Machine Learning", "Cybersecurity", "React"],
+    highlight: "Cybersecurity + ML platform",
+    category: "Cybersecurity",
+    visual: "shield",
+  },
+  {
+    title: "Prep.AI",
+    description:
+      "Developed an AI-powered platform using LLMs, FAISS, and LangChain for resume analysis and interview preparation. Generates ATS feedback, resume improvement recommendations, and personalized interview guidance.",
+    tech: ["Python", "Gemini API", "FAISS", "LangChain", "Streamlit"],
+    highlight: "AI interview preparation",
+    category: "Generative AI",
+    github: "https://github.com/2084sakshi/prep.ai",
+    live: "https://prepai.streamlit.app/",
+    visual: "ai",
+  },
+  {
+    title: "MedConnect360",
+    description:
+      "Built a full-stack doctor-patient appointment management platform featuring authentication, appointment booking, patient management, doctor workflows, and REST APIs.",
+    tech: ["MongoDB", "Express.js", "React.js", "Node.js"],
+    highlight: "Full-stack MERN platform",
+    category: "Software Engineering",
+    visual: "stack",
+  },
+  {
     title: "Road Accident Analysis Dashboard",
     description:
       "Developed an interactive Power BI dashboard analyzing accident trends, casualty statistics, severity patterns, vehicle involvement, road conditions, and geographical distributions. Built KPI-driven reports and analytical visualizations to support data-driven decision making.",
@@ -50,15 +79,6 @@ const projects: Project[] = [
     visual: "chart",
   },
   {
-    title: "MedConnect360",
-    description:
-      "Built a full-stack doctor-patient appointment management platform featuring authentication, appointment booking, patient management, doctor workflows, and REST APIs.",
-    tech: ["MongoDB", "Express.js", "React.js", "Node.js"],
-    highlight: "Full-stack MERN platform",
-    category: "Software Engineering",
-    visual: "stack",
-  },
-  {
     title: "Email-GPT",
     description:
       "Developed an AI-powered email generation platform that creates customized emails based on user requirements, tone, subject, and content preferences.",
@@ -66,26 +86,6 @@ const projects: Project[] = [
     highlight: "AI-powered email generation",
     category: "Software Engineering",
     visual: "mail",
-  },
-  {
-    title: "Prep.AI",
-    description:
-      "Developed an AI-powered platform using LLMs, FAISS, and LangChain for resume analysis and interview preparation. Generates ATS feedback, resume improvement recommendations, and personalized interview guidance.",
-    tech: ["Python", "Gemini API", "FAISS", "LangChain", "Streamlit"],
-    highlight: "AI interview preparation",
-    category: "Generative AI",
-    github: "https://github.com/2084sakshi/prep.ai",
-    live: "https://prepai.streamlit.app/",
-    visual: "ai",
-  },
-  {
-    title: "Network Intrusion Detection and Prevention System",
-    description:
-      "Developed a full-stack cybersecurity platform capable of monitoring network traffic, detecting malicious activities, classifying threats, generating alerts, maintaining security logs, and visualizing network events through real-time dashboards.",
-    tech: ["Python", "Flask", "SQLite", "Machine Learning", "Cybersecurity", "React"],
-    highlight: "Cybersecurity + ML platform",
-    category: "Cybersecurity",
-    visual: "shield",
   },
 ];
 
